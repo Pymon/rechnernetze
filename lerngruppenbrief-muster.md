@@ -1,20 +1,18 @@
 # Lerngruppenbrief
 
-***Lernblock***: {TODO Nummer}
+***Lernblock***: 0
 
-***Konsultationstermin***: {TODO auswählen 'Di 09:30' oder 'Mi 09:15' oder 'Do 09:30'}
+***Konsultationstermin***: Do 09:30
 
-***Lerngruppen-Nummer***: {TODO Nummer}
+***Lerngruppen-Nummer***: 7
 
 ***Lerngruppen-Sprecher***: {TODO Name}
 
-***Aktive Teilnehmer***: {TODO Liste der Namen}
+***Aktive Teilnehmer***: Jana Bergk, Simon Günther, Constantin Stumm
 
 ## Aufgaben
 
 Wir haben folgende Aufgaben gelöst und schätzen sie wie folgt ein:
-
-{TODO Tabelle mit den entsprechenden Angaben ausfüllen, wie im Beispiel in der ersten Zeile}
 
 |Nummer |Leicht |Mittel |Schwer |Gelöst |Nicht Gelöst |
 |-------|-------|-------|-------|-------|-------------|
