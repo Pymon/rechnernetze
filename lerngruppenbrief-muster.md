@@ -8,7 +8,7 @@
 
 ***Lerngruppen-Sprecher***: {TODO Name}
 
-***Aktive Teilnehmer***: Jana Bergk, Simon Günther, Constantin Stumm
+***Aktive Teilnehmer***: Jana Bergk, Simon Günther, Willy Kirchner, Constantin Stumm, Estelle Wünsche
 
 ## Aufgaben
 
