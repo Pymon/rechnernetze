@@ -19,7 +19,7 @@ Wir haben folgende Aufgaben gelöst und schätzen sie wie folgt ein:
 |999    |       |x      |       |x      |             |
 |       |       |       |       |       |             |
 |       |       |       |       |       |             |
-|4      |x      |       |       |x      |             |
+|       |       |       |       |       |             |
 |       |       |       |       |       |             |
 |       |       |       |       |       |             |
 |       |       |       |       |       |             |
