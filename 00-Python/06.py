@@ -6,6 +6,8 @@ accessing them in a randomly shuffled manner.
 import string
 from typing import List, Tuple
 from random import shuffle
+import sys
+import json
 
 class Question:
     """
@@ -121,3 +123,54 @@ def letter_to_index(letter: str) -> int:
         raise ValueError("letter not in range a-z")
     return ord(letter)-97
 
+def main():
+    master = QuizMaster()
+
+
+    with open("./questions.json", encoding="UTF8") as f:
+      questions = json.load(f)
+
+    for question in questions["questions"]:
+        master.add_question(**question)
+
+    if len(sys.argv) != 2:
+        print("Falsche Eingabe")
+        return 1
+    
+    try:
+        question_count = int(sys.argv[1])
+    except Exception:
+        print("Falsches Argument")
+        return 1
+
+    for i in range(question_count):
+        question = master.pick_question()
+        print(f"Frage {i+1}/{str(question_count)}: {question.question_text}")
+
+        for idx, answer in enumerate(question.answers):
+            print(index_to_letter(idx).upper(), answer)
+
+        correct_input_flag = False
+        while not correct_input_flag:
+          user_answer = input("Antwort: ")
+          try:
+              user_answer = letter_to_index(user_answer.lower())
+              correct_input_flag = True
+          except ValueError:
+              print("Fehler falsche Eingabe")
+          except Exception:
+              print("Unbekannter Fehler")
+        
+        is_correct, correct_answers = question.answer([user_answer])
+
+        if is_correct:
+            print("Richtig!")
+        else:
+            print("Falsch! Richtig wäre: ", end="")
+
+            print(*[index_to_letter(correct_answer) for correct_answer in correct_answers], sep=", ")
+            print()
+
+      
+if __name__ == "__main__":
+    sys.exit(main())

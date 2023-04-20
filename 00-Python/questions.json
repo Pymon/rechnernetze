@@ -1,0 +1,7 @@
+{
+  "questions":[
+    {"question_text": "Zu welcher Schicht gehört das Protokoll HTTP?", "answers": ["Bitübertragungsschicht", "Sicherungsschicht", "Vermittlungsschicht", "Transportschicht", "Anwendungsschicht"], "correct_answers": [4]}
+    
+
+  ]
+}
