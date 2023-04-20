@@ -19,7 +19,7 @@ Wir haben folgende Aufgaben gelöst und schätzen sie wie folgt ein:
 |   1   |       |       |       |       |             |
 |   2   |       |       |       |       |             |
 |   3   |       |       |       |       |             |
-|   4   |       |       |       |       |             |
+|   4   |x      |       |       |x      |             |
 |   5   |       |       |       |       |             |
 |   6   |       |       |       |       |             |
 
