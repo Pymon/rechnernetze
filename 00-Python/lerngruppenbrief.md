@@ -6,7 +6,7 @@
 
 ***Lerngruppen-Nummer***: 7
 
-***Lerngruppen-Sprecher***: {TODO Name}
+***Lerngruppen-Sprecher***: Willy Kirchner
 
 ***Aktive Teilnehmer***: Jana Bergk, Simon Günther, Willy Kirchner, Constantin Stumm, Estelle Wünsche
 
