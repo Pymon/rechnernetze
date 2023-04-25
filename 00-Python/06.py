@@ -152,16 +152,16 @@ def main():
 
         correct_input_flag = False
         while not correct_input_flag:
-          user_answer = input("Antwort: ")
+          user_answer = input("Antwort: ").replace(" ", "").split(",")
           try:
-              user_answer = letter_to_index(user_answer.lower())
-              correct_input_flag = True
+            for idx, letter in enumerate(user_answer):
+              user_answer[idx] = letter_to_index(letter.lower())
+            correct_input_flag = True
           except ValueError:
               print("Fehler falsche Eingabe")
           except Exception:
               print("Unbekannter Fehler")
-        
-        is_correct, correct_answers = question.answer([user_answer])
+        is_correct, correct_answers = question.answer(user_answer)
 
         if is_correct:
             print("Richtig!")
