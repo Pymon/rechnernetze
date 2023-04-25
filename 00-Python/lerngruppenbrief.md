@@ -8,7 +8,7 @@
 
 ***Lerngruppen-Sprecher***: Willy Kirchner
 
-***Aktive Teilnehmer***: Jana Bergk, Simon Günther, Willy Kirchner, Constantin Stumm, Estelle Wünsche
+***Aktive Teilnehmer***: Jana Bergk, Martin Dymek, Simon Günther, Willy Kirchner, Constantin Stumm, Estelle Wünsche
 
 ## Aufgaben
 
