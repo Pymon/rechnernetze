@@ -13,8 +13,10 @@ try:
         print(num1 + num2)
     elif func == "sub":
         print(num1 - num2)
-    elif func == "sub":
+    elif func == "mul":
         print(num1 * num2)
+    else:
+        raise Exception("Unbekannte Funktion")
 
 except Exception as e:
     print("[!] Fehler: " + str(e))
