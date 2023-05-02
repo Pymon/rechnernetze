@@ -16,17 +16,17 @@ Wir haben folgende Aufgaben gelöst und schätzen sie wie folgt ein:
 
 |Nummer |Leicht |Mittel |Schwer |Gelöst |Nicht Gelöst |
 |-------|-------|-------|-------|-------|-------------|
-|   1   |       |       |       |       |             |
+|   1   |       |   x   |       |   x   |             |
 |   2   |       |       |       |       |             |
-|   3   |       |       |       |       |             |
+|   3   |   x   |       |       |   x   |             |
 |   4   |       |       |       |       |             |
 |   5   |       |       |       |       |             |
 |   6   |       |       |       |       |             |
 |   7   |       |       |       |       |             |
-|   8   |       |       |       |       |             |
-|   9   |       |       |       |       |             |
+|   8   |   x   |       |       |   x   |             |
+|   9   |   x   |       |       |   x   |             |
 |  10   |       |       |       |       |             |
-|  11   |       |       |       |       |             |
+|  11   |   x   |       |       |   x   |             |
 
 ## Probleme
 
