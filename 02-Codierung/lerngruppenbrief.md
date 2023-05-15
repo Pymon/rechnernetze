@@ -28,8 +28,8 @@ Wir haben folgende Aufgaben gelöst und schätzen sie wie folgt ein:
 
 ## Probleme
 
-{TODO bitte beschreibt kurz die aufgetretenen Probleme}
+
 
 ## Hinweise/Anfragen an den Tutor
 
-{TODO bitte ausfüllen sofern benötigt}
+Typo: In Aufgabe 8.3 wird sich auf Aufgabe 6.5 bezogen, da diese nicht existiert ist vermutlich die 7.5 gemeint.
