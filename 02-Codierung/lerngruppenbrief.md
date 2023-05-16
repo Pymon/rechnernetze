@@ -39,7 +39,7 @@ Wir haben folgende Aufgaben gelöst und schätzen sie wie folgt ein:
 
 ## Probleme
 
-Zu Aufgabe 8: es war sehr schwer nachzuvollziehen, wie genau die Hardwareschaltung funktioniert, da unklar und schwer nachvollziehbar war, an welchen Schaltern ein XOR-Gatter einzufügen ist und an welchen nicht. Sowohl im Vorlesungs-, als auch im Übungsvideo war dieses nicht hinreichend erklärt. 
+Zu Aufgabe 8: Es war sehr schwer nachzuvollziehen, wie genau die Hardwareschaltung funktioniert, da unklar und schwer nachvollziehbar war, an welchen Schaltern ein XOR-Gatter einzufügen ist und an welchen nicht. Sowohl im Vorlesungs-, als auch im Übungsvideo war dieses nicht hinreichend erklärt. 
 
 ## Hinweise/Anfragen an den Tutor
 
