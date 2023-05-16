@@ -1,35 +1,48 @@
 # Lerngruppenbrief
 
-***Lernblock***: 2
+***Lernblock***: 02
 
 ***Konsultationstermin***: Do 09:30
 
-***Lerngruppen-Nummer***: 7
+***Lerngruppen-Nummer***: 07
 
 ***Lerngruppen-Sprecher***: Willy Kirchner
 
-***Aktive Teilnehmer***: Jana Bergk, Martin Dymek, Simon Günther, Willy Kirchner, Constantin Stumm, Estelle Wünsche
+***Aktive Teilnehmer***: Estelle Wünsche, Simon Günther, Constantin Hartmut Stumm, Martin Dymek, Jana Bergk
 
 ## Aufgaben
 
 Wir haben folgende Aufgaben gelöst und schätzen sie wie folgt ein:
 
+{TODO Tabelle mit den entsprechenden Angaben ausfüllen, wie im Beispiel in der ersten Zeile}
+
 |Nummer |Leicht |Mittel |Schwer |Gelöst |Nicht Gelöst |
 |-------|-------|-------|-------|-------|-------------|
-|   1   |       |       |       |       |             |
-|   2   |       |       |       |       |             |
-|   3   |       |       |       |       |             |
-|   4   |       |       |       |       |             |
-|   5   |       |       |       |       |             |
-|   6   |       |       |       |       |             |
-|   7   |       |       |       |       |             |
-|   8   |       |       |       |       |             |
-|   9   |       |       |       |       |             |
+|   1   |   x   |       |       |   x   |             |
+|       |       |       |       |       |             |
+|   2   |   x   |       |       |   x   |             |
+|       |       |       |       |       |             |
+|   3   |   x   |       |       |   x   |             |
+|       |       |       |       |       |             |
+|   4   |       |   x   |       |   x   |             |
+|       |       |       |       |       |             |
+|   5   |   x   |       |       |   x   |             |
+|       |       |       |       |       |             |
+|   6   |   x   |       |       |   x   |             |
+|       |       |       |       |       |             |
+|   7   |       |   x   |       |   x   |             |
+|       |       |       |       |       |             |
+|   8   |       |       |   x   |       |      x      |
+|       |       |       |       |       |             |
+|   9   |       |       |   x   |       |      x      |
+
+
+
 
 ## Probleme
 
-
+Zu Aufgabe 8: es war sehr schwer nachzuvollziehen, wie genau die Hardwareschaltung funktioniert, da unklar und schwer nachvollziehbar war, an welchen Schaltern ein XOR-Gatter einzufügen ist und an welchen nicht. Sowohl im Vorlesungs-, als auch im Übungsvideo war dieses nicht hinreichend erklärt. 
 
 ## Hinweise/Anfragen an den Tutor
 
-Typo: In Aufgabe 8.3 wird sich auf Aufgabe 6.5 bezogen, da diese nicht existiert ist vermutlich die 7.5 gemeint.
+{TODO bitte ausfüllen sofern benötigt}
