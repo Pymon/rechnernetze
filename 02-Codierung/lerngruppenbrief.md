@@ -8,13 +8,11 @@
 
 ***Lerngruppen-Sprecher***: Willy Kirchner
 
-***Aktive Teilnehmer***: Estelle Wünsche, Simon Günther, Constantin Hartmut Stumm, Martin Dymek, Jana Bergk
+***Aktive Teilnehmer***: Estelle Wünsche, Simon Günther, Constantin Hartmut Stumm, Willy Kirchner, Martin Dymek, Jana Bergk
 
 ## Aufgaben
 
 Wir haben folgende Aufgaben gelöst und schätzen sie wie folgt ein:
-
-{TODO Tabelle mit den entsprechenden Angaben ausfüllen, wie im Beispiel in der ersten Zeile}
 
 |Nummer |Leicht |Mittel |Schwer |Gelöst |Nicht Gelöst |
 |-------|-------|-------|-------|-------|-------------|
@@ -45,4 +43,5 @@ Zu Aufgabe 8: es war sehr schwer nachzuvollziehen, wie genau die Hardwareschaltu
 
 ## Hinweise/Anfragen an den Tutor
 
-{TODO bitte ausfüllen sofern benötigt}
+Zu Aufgabe 8:
+Hier wird sich im Aufgabenteil 3 auf Aufgabe 6.5 bezogen, die es hier aber nicht gibt. Könnte damit Aufgabe 7.5 gemeint sein?
