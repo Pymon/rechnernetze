@@ -61,7 +61,7 @@ TCP viel zuverlässiger als UPD durch Acknowledgements nach Datensendung als Bes
 Dadurch TCP viel aufwendiger als UDP, dieses aber deutlich unzuverlässiger, da nicht sichergestellt, dass Daten angekommen sind, und keine Verbindung aufgebaut wird
 
 Vorteil UDP ggü TCP
-- deutlich schneller/ weniger Verbindungsbeanspruchend, da nur Datensendung
+- deutlich schneller/ weniger verbindungsbeanspruchend, da nur Datensendung
 
 Nachteile UDP ggü TCP
 - keine Paketnummerierung, keine Paketempfangsbestätigung
