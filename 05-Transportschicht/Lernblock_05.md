@@ -74,7 +74,7 @@ Nachteile UDP ggü TCP
 Hierbei handelt es sich um einen Client, da dieser durch s.connect() Verbindung zum Server herstellt, dann Daten sendet und nach Antwort die Verbindung durch s.close() schließt
 Es wird wird TCP verwendet. Das ist erkennbar an dem Verbindungsaufbau.
 #### 7.2
-Client, da 
+Client, da zunächst direkt Nachricht gesendet wird
 UDP, da kein Verbindungasaufbau angefragt wird, Sockettyp = SOCK_DGRAM
 #### 7.3
 Server, da durch s.listen() auf Datensendung gewartet wird
