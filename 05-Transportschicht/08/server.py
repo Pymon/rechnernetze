@@ -32,6 +32,8 @@ class TimeServer(socket.socket):
                 print("\n[-] Server closed.")
                 break
         self.running = False
+        self.sending_thread.join()
+        self.close()
 
     def send_time(self):
         t_start = datetime.now()
@@ -47,4 +49,3 @@ class TimeServer(socket.socket):
 if __name__ == "__main__":
     server = TimeServer()
     server.run()
-
