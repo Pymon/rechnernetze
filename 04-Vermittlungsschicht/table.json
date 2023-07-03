@@ -1,0 +1,18 @@
+{
+    "entries": [
+        {
+            "destination": "",
+            "gateway": "",
+            "netmask": "",
+            "flags": "",
+            "interface": ""
+        },
+            {
+            "destination": "",
+            "gateway": "",
+            "netmask": "",
+            "flags": "",
+            "interface": ""
+        }
+    ]
+}
