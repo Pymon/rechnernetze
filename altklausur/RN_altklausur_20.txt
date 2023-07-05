@@ -1,0 +1,113 @@
+# 1
+a)
+subnet mask 255.255.254.0
+subnet address 120.34.12.0
+
+b)
+24 bit Subnetzaddresse d.h. 8 Bit für Hosts
+2^8 = 256
+Dann noch Broadcast und Networkaddress abziehen (die erste und die letzte Adresse)
+256 - 2 = 254
+
+c)
+192.168.1.1
+
+d)
+net 120.34.12.0   netmask 255.255.254.0 gw 192.168.1.1     dev eth1
+net 192.168.0.0   netmask 255.255.0.0   gw 0.0.0.0         dev eth1
+net 134.109.186.0 netmask 255.255.255.0 gw 0.0.0.0         dev eth0
+net 10.0.0.0      netmask 255.0.0.0     gw 134.109.186.13  dev eth0
+net default       netmask 0.0.0.0       gw 134.109.186.254 dev eth0
+
+# 2
+e) Weil kein Übertragungsmedium ohne Störungsquelle existiert und es somit zu fehlerhaften übertragungsquellen
+kommen kann.
+
+Zum Beispiel können bei schlecht geschirmten Kupferkabeln Spannungen induziert werden, die zu Spannungspitzen führen.
+Bei Funk allgemein handelt es sich um ein geteiltes Medium, wobei dadurch ständig gegenseitig gestört werden kann.
+
+# 3
+a)
+Wir würden ein Switch empfehlen, da hosts und keine Netzwerksegmente verbunden werden sollen, wofür eine Bridge geeignet wäre. Außerdem biet
+et ein Switch vollduplex und somit im Vergleich einen höheren Datendurchsatz. Außerdem sollten switches mit 4 Ports recht günstig sein.
+Ein Router wird nicht benötigt, da nur die Geräte untereinander verbunden werden sollen und nicht mit einem anderen Netz.
+
+b)
+1: 2,3,4 -> da SAT noch nicht weiß wo B ist
+2: 1
+3: 2 -> da in schritt 2 B etwas abgesendet hat
+4: 1 -> A ist in der SAT schon vorhanden
+
+
+Port 1: A
+Port 2: B
+Port 3: C
+Port 4: -
+
+c)
+Durch die Änderung des Widerstandes wird erkannt, dass kein Gerät mehr an diesem Port angeschlossen ist und somit wird wieder ein
+Broadcast gesendet bis sich C zurückmeldet und es wieder in der SAT aufgenommen wird.
+
+Geräte nicht umstecken,  ???
+
+d)
+Man kann die MAC adressen nicht gruppieren in beispielsweise subnetze. Somit ist keine gemeinsame Identifikation möglich.
+
+IP Adressen sind flexibel und können sich dem Netz anpassen.
+
+# 4
+
+a)
+GET /50 HTTP/1.1
+Host: www.covid19-donation.com
+
+Dies dient dazu den Server zu identifizieren und bietet somit die möglichkeit auf einer IP Adresse mehrere HTTP Server laufen zu lassen.
+
+
+b)
+a: SOCK_STREAM
+b: 80
+c: donationsum
+d: accept()
+e: llines[0]
+f: path in ["/50", "/20", "/10"]
+g: donationsum + int(path[1:])
+h: "HTTTP/1.1 404 Not Found\n"
+
+# 5
+a)
+1: 
+SEQ=6
+SEQ=2 ACK=7
+SEQ=7 ACK=3 
+
+2:
+Es ist die 2., erkennbar an der Sequenznummer die in der 3 ackwoledget wird.
+
+b)
+
+Source Port: 22
+Destination Port: 62774
+
+SSH
+
+c)
+1: IPv4, IPv6, ICMP
+2: Weil keine Verbindung aufgebaut wird und somit keine Bestätigung für den Empfang von Daten existiert.
+
+# 6
+1: POP3
+2: ---
+3: OSPF, RIP
+4: ARP
+5: Frequenzmultiplexing, Signal-Modulation
+6: Zerlegung Teilprobleme, Schnittstellen zwischen den Schichten, Austauschbarkeit der Implementierungen, Technische Abstraktion
+
+
+
+
+
+
+
+
+
