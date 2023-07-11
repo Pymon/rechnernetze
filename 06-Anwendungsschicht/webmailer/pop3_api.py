@@ -6,8 +6,9 @@ logging.basicConfig(
     format="[%(levelname)s][%(module)s] %(message)s", level=logging.DEBUG
 )
 
-SERVER_ADDRESS = "taurus.informatik.tu-chemnitz.de"
-SERVER_PORT = 110
+
+class ConnectionException(Exception):
+    pass
 
 
 class AuthenticationException(Exception):
@@ -19,7 +20,7 @@ class SessionNotAuthenticated(Exception):
 
 
 class POP3Connection(POP3):
-    def __init__(self, host=SERVER_ADDRESS, port=SERVER_PORT):
+    def __init__(self, host, port):
         """Provides simple API for specific functions"""
         super().__init__(host, port)
 
@@ -60,13 +61,13 @@ class POP3ConnectionHandler:
     def __init__(self):
         self.connections = {}
 
-    def connect(self, username, password=None):
+    def connect(self, username, password=None, server=None, port=None):
         """Adds connection if not already existing"""
         if username in self.connections:
             if not self.is_connected(username):
                 raise SessionNotAuthenticated
         else:
-            self._add_connection(username, password)
+            self._add_connection(username, password, server, port)
         return self.connections[username]
 
     def disconnect(self, username):
@@ -86,9 +87,12 @@ class POP3ConnectionHandler:
                 pass
         return False
 
-    def _add_connection(self, username, password):
+    def _add_connection(self, username, password, server, port):
         """Authenticates against POP3 server"""
-        connection = POP3Connection()
+        try:
+            connection = POP3Connection(server, port)
+        except:
+            raise ConnectionException
         connection.authenticate(username, password)
         self.connections[username] = connection
         return self.connections[username]

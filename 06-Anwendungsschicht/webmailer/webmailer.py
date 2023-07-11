@@ -8,6 +8,9 @@ import infobox
 import pop3_api
 from webserver import CustomHTTPRequestHandler, CustomHTTPServer
 
+POP3_STANDARD_SERVER = "taurus.informatik.tu-chemnitz.de"
+POP3_STANDARD_PORT = 110
+
 
 def protected_route(func):
     def inner(*args):
@@ -32,6 +35,12 @@ class Webmailer(CustomHTTPRequestHandler):
         else:
             username = args.get("username")
             password = args.get("password")
+            server = args.get("server")
+            port = args.get("port")
+            if not server:
+                server = POP3_STANDARD_SERVER
+            if not port:
+                port = POP3_STANDARD_PORT
             if not username or not password:
                 context["infobox-area"] = infobox.Infobox(
                     infobox.WARNING,
@@ -40,12 +49,18 @@ class Webmailer(CustomHTTPRequestHandler):
                 self.render("login.html", context)
                 return
             try:
-                pop3.connect(username, password)
+                pop3.connect(username, password, server, port)
                 self.redirect("/mailbox", cookies={"username": username})
             except pop3_api.AuthenticationException:
                 context["infobox-area"] = infobox.Infobox(
                     infobox.ERROR,
                     "<b>Anmeldung fehlgeschlagen:</b> Bitte erneut versuchen.",
+                ).render()
+                self.render("login.html", context)
+            except pop3_api.ConnectionException:
+                context["infobox-area"] = infobox.Infobox(
+                    infobox.ERROR,
+                    "<b>Anmeldung fehlgeschlagen:</b> Keine Verbindung zum Server.",
                 ).render()
                 self.render("login.html", context)
 
