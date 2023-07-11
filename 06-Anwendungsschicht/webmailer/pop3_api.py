@@ -11,7 +11,7 @@ SERVER_ADDRESS = "taurus.informatik.tu-chemnitz.de"
 SERVER_PORT = 110
 
 class AuthenticationException(Exception): pass
-class SessionExpiredException(Exception): pass
+class SessionNotAuthenticated(Exception): pass
 
 class POP3Connection(POP3):
     def __init__(self, host=SERVER_ADDRESS, port=SERVER_PORT):
@@ -30,7 +30,7 @@ class POP3Connection(POP3):
         try:
             return super().stat()
         except error_proto:
-            raise Exception
+            raise SessionNotAuthenticated
         
     def get_table_info(self, mail_id):
         try:
@@ -46,7 +46,6 @@ class POP3Connection(POP3):
             return email.message_from_bytes(b"\n".join(mail[1]))
         except error_proto:
             raise Exception
-        
 
 
 class POP3ConnectionHandler():
@@ -55,20 +54,26 @@ class POP3ConnectionHandler():
     
     def connect(self, username, password=None):
         if username in self.connections:
-            if not self._is_active(username):
-                raise SessionExpiredException
+            if not self.is_connected(username):
+                raise SessionNotAuthenticated
         else:
             self._add_connection(username, password)
         return self.connections[username]
+    
+    def is_connected(self, username):
+        if username in self.connections:
+            try:
+                self.connections[username].get_stat()
+                return True
+            except SessionNotAuthenticated:
+                pass
+        return False
 
     def _add_connection(self, username, password):
         connection = POP3Connection()
         connection.authenticate(username, password)
         self.connections[username] = connection
         return self.connections[username]
-
-    def _is_active(self, username):
-        return True
 
     def _renew_connection(self, username, password):
         pass
