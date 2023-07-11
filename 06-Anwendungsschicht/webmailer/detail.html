@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>{subject}</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//www.tu-chemnitz.de/tucal4/css/tucal4.css?202303151407"
+    />
+  </head>
+  <body>
+    <main class="col-xs-12 page-content">
+      <form action="/mailbox">
+        <button class="btn btn-info" type="submit">
+          <span class="tucicon-nav-left">zum Posteingang</span>
+          </button>
+     </form>
+      <div class="detail-container" style="padding: 5rem">
+        <h1>{subject}</h1>
+        <h3>von {from}</h3>
+        {payload}
+        <br />
+      </div>
+    </main>
+  </body>
+</html>

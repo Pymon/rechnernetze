@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Mailbox für {username}</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//www.tu-chemnitz.de/tucal4/css/tucal4.css?202303151407"
+    />
+  </head>
+  <body>
+    <main class="col-xs-12 page-content">
+    <div class="mailbox-container" style="padding: 5rem;">
+    <h1>Posteingang von {username}</h1>
+    <br>
+    <div>
+      <table class="table table-striped">
+        <tbody>
+          {table_entries}
+        </tbody>
+      </table>
+    </div>
+    {mails_total} Mails insgesamt - {size_total} Bytes
+    </div>
+</main>
+  </body>
+</html>
