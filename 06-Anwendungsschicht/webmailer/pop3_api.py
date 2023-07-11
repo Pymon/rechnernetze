@@ -1,23 +1,30 @@
-#!/usr/bin/python3
-#-*- coding: utf-8 -*-
-
-from poplib import POP3, error_proto
-import logging
 import email
+import logging
+from poplib import POP3, error_proto
 
-logging.basicConfig(format='[%(levelname)s][%(module)s] %(message)s', level=logging.DEBUG)
+logging.basicConfig(
+    format="[%(levelname)s][%(module)s] %(message)s", level=logging.DEBUG
+)
 
 SERVER_ADDRESS = "taurus.informatik.tu-chemnitz.de"
 SERVER_PORT = 110
 
-class AuthenticationException(Exception): pass
-class SessionNotAuthenticated(Exception): pass
+
+class AuthenticationException(Exception):
+    pass
+
+
+class SessionNotAuthenticated(Exception):
+    pass
+
 
 class POP3Connection(POP3):
     def __init__(self, host=SERVER_ADDRESS, port=SERVER_PORT):
+        """Provides simple API for specific functions"""
         super().__init__(host, port)
-    
+
     def authenticate(self, username, password):
+        """Authenticates against POP3 server"""
         try:
             self.user(username)
             self.pass_(password)
@@ -25,42 +32,52 @@ class POP3Connection(POP3):
         except error_proto:
             logging.warning(f"User {username} failed to authenticate")
             raise AuthenticationException("Invalid password")
-    
+
     def get_stat(self):
+        """Get stat info from server"""
         try:
             return super().stat()
         except error_proto:
             raise SessionNotAuthenticated
-        
+
     def get_table_info(self, mail_id):
-        try:
-            header = super().top(mail_id, 0)
-            header = email.message_from_bytes(b"\n".join(header[1]))
-            return header.get("From"), header.get("Subject"), header.get("Date")
-        except error_proto:
-            raise Exception
-    
+        """Get specific data for mailbox rendering"""
+        header = super().top(mail_id, 0)
+        header = email.message_from_bytes(b"\n".join(header[1]))
+        return header.get("From"), header.get("Subject"), header.get("Date")
+
     def get_mail(self, mail_id):
-        try:
-            mail = super().retr(mail_id)
-            return email.message_from_bytes(b"\n".join(mail[1]))
-        except error_proto:
-            raise Exception
+        """Get mail as email object"""
+        mail = super().retr(mail_id)
+        return email.message_from_string(
+            "\n".join(mail.decode("utf-8") for mail in mail[1])
+        )
 
 
-class POP3ConnectionHandler():
+class POP3ConnectionHandler:
+    """Handles multiple connections to a POP3 server"""
+
     def __init__(self):
         self.connections = {}
-    
+
     def connect(self, username, password=None):
+        """Adds connection if not already existing"""
         if username in self.connections:
             if not self.is_connected(username):
                 raise SessionNotAuthenticated
         else:
             self._add_connection(username, password)
         return self.connections[username]
-    
+
+    def disconnect(self, username):
+        """Disconnects from server, deletes connection"""
+        if self.is_connected:
+            self.connections[username].quit()
+        if username in self.connections:
+            del self.connections[username]
+
     def is_connected(self, username):
+        """Checks if connection to server is active"""
         if username in self.connections:
             try:
                 self.connections[username].get_stat()
@@ -70,21 +87,8 @@ class POP3ConnectionHandler():
         return False
 
     def _add_connection(self, username, password):
+        """Authenticates against POP3 server"""
         connection = POP3Connection()
         connection.authenticate(username, password)
         self.connections[username] = connection
         return self.connections[username]
-
-    def _renew_connection(self, username, password):
-        pass
-
-    def _quit_connection(self, username):
-        pass
-
-if __name__ == "__main__":
-    pop3_handler = POP3ConnectionHandler()
-    try:
-        pop3 = pop3_handler.connect("rot", "rot")
-        pop3.get_table_info(1)
-    except AuthenticationException as e:
-        logging.warning(e)

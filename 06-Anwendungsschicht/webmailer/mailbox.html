@@ -11,15 +11,16 @@
     <main class="col-xs-12 page-content">
     <div class="mailbox-container" style="padding: 5rem;">
       <div class="header-container" style="display:flex;justify-items:center;text-align: center;">
-        <h1 style="margin:0">Posteingang von {username}</h1>
-        <form action="/" style="margin-left: auto">
+
+        <h1 style="margin:0">
+          Posteingang von {username}
+        </h1>
+        <form action="/logout" style="margin-left: auto">
           <button class="btn btn-info" type="submit">
             <span class="tucicon-link-extern">Logout</span>
             </button>
        </form>
       </div>
-    
-    
     <br>
     <div>
       <table class="table table-striped">
@@ -28,7 +29,11 @@
         </tbody>
       </table>
     </div>
-    {mails_total} Mails insgesamt - {size_total} Bytes
+    <div class="foot-container" style="display:flex;">
+      <p>{mails_total} Mails insgesamt - {size_total} Bytes</p>
+      <p style="margin-left: auto;text-align: end;">{greeting}</p>
+    </div>
+
     </div>
 </main>
   </body>
