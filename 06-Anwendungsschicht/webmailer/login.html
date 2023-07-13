@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <title>Login to {program_name}</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//www.tu-chemnitz.de/tucal4/css/tucal4.css?202303151407"
+    />
+  </head>
+  <body>
+    <main class="col-xs-12 page-content">
+      <div style="width: 50%; padding: 5rem; margin: auto">
+        {infobox-area}
+        <h2 class="linie grey">Bei Webmailer anmelden</h2>
+        <br>
+
+        <form class="form-horizontal" action="/login">
+          <div class="form-group">
+            <label for="username" class="col-xm-3 control-label"
+              >Benutzername</label
+            >
+            <div class="col-xm-9">
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                name="username"
+                placeholder="Benutzername"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password" class="col-xm-3 control-label"
+              >Passwort</label
+            >
+            <div class="col-xm-9">
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                placeholder="Passwort"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="server" class="col-xm-3 control-label">Server</label>
+            <div class="col-xm-9">
+              <input
+                type="text"
+                class="form-control"
+                id="server"
+                name="server"
+                placeholder="taurus.informatik.tu-chemnitz.de"
+                ,
+                value="taurus.informatik.tu-chemnitz.de"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="port" class="col-xm-3 control-label">Port</label>
+            <div class="col-xm-9">
+              <input
+                type="number"
+                class="form-control"
+                id="port"
+                name="port"
+                placeholder="110"
+                value="110"
+              />
+            </div>
+          </div>
+          <br />
+          <div class="form-group">
+            <div class="col-xm-offset-3 col-xm-9">
+              <input type="submit" class="btn btn-default" value="Anmelden" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

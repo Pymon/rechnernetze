@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Mailbox für {username}</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//www.tu-chemnitz.de/tucal4/css/tucal4.css?202303151407"
+    />
+  </head>
+  <body>
+    <main class="col-xs-12 page-content">
+    <div class="mailbox-container" style="padding: 5rem;">
+      <div class="header-container" style="display:flex;justify-items:center;text-align: center;">
+
+        <h1 style="margin:0">
+          Posteingang von {username}
+        </h1>
+        <form action="/logout" style="margin-left: auto">
+          <button class="btn btn-info" type="submit">
+            <span class="tucicon-link-extern">Logout</span>
+            </button>
+       </form>
+      </div>
+    <br>
+    <div>
+      <table class="table table-striped">
+        <tbody>
+          {table_entries}
+        </tbody>
+      </table>
+    </div>
+    <div class="foot-container" style="display:flex;">
+      <p>{mails_total} Mails insgesamt - {size_total} Bytes</p>
+      <p style="margin-left: auto;text-align: end;">{greeting}</p>
+    </div>
+
+    </div>
+</main>
+  </body>
+</html>
