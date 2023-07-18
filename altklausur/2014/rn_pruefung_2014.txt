@@ -1,0 +1,73 @@
+# RN Prüfung 2014
+
+# 1 a
+
+d = 10001
+d' = 10001000
+g = 1011
+
+10001000 : 1011 = ...
+1011
+001110
+  1011
+  01010
+   1011
+   00010 <- Rest
+   
+Vom Rest 00010 nimmt man die hinteren 3 Stellen, da das dem Grad des
+Generatorpolynoms entspricht.
+
+Übertragen wird: 10001010
+
+# 1 b
+
+Die Richtigkeit wird daran erkannt, dass beim teilen der Empfangenen Datenfolge
+mit dem Prüfpolynom der Nullvektor als Ergebnis rauskommen muss.
+
+10001010 : 1011 = ...
+1011
+001110
+  1011
+  01011
+   1011
+   0000 <- Nullvektor, also Richtig
+
+# 2
+
+## R1
+|Destination | Netmask | Gateway | Interface |
+|192.168.128.0 | 255.255.192.0 | * | B |
+|172.16.0.0 | 255.255.0.0 | * | C |
+|10.130.0.0 | 255.254.0.0 | 172.16.10.4 | C |
+|10.128.0.0 | 255.255.0.0 | 172.16.10.4 | C |
+|10.129.0.0 | 255.255.0.0 | 172.16.10.4 | C |
+|default | 0.0.0.0 | 1.2.3.4 | A |
+
+*Frage*: Kann das deafault gateway überhaupt erreicht werden, da das
+Netzwerk, in dem es liegt nicht in der Routing Table aufgelistet ist?
+
+## R2
+|Destination | Netmask | Gateway | Interface |
+|172.16.0.0 | 255.255.0.0 | * | A |
+|10.130.0.0 | 255.254.0.0 | * | D |
+|10.128.0.0 | 255.255.0.0 | * | C |
+|10.129.0.0 | 255.255.0.0 | * | B |
+|default | 0.0.0.0 | 172.16.0.1 | A |
+
+# 3
+
+Anwendung: DNS Name konnte nicht aufgelöst werden, HTTP Fehler (z.B. Page Not Found)
+Transport: Webserver ist auf falschem Port konfiguriert(also nicht 80), keine verfügbaren Ports mehr am Server,
+keine verfügbaren Ports am Client mehr
+Vermittlungsschicht: Routingtabelle falsch konfiguriert (default gateway falsch angegeben)
+Netzzugangsschicht: keine physikalische Übertragung möglich (z.B. Kabelbruch, WLAN Interferenz), falsche Konfiguration der SAT
+
+# 4
+
+Es können 128 Zustände durch die QAM abgebildet werden, das heißt es können
+log_2(128)=7 Bits übertragen werden.
+
+# 5 a
+siehe task_5.html
+
+# 5 b
