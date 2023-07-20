@@ -31,7 +31,7 @@ Außerdem dient es als zusätzliche Erkennung falls auf physikalischer Ebene
 die Nutzdaten als auch die Prüfdaten so manipuliert wurden, dass es als
 richtig gewertet wurde, obwohl die Information falsch ist. Dies kann bei der
 Verwendung von einem Paritätsbit leicht passieren, bei anderen Verfahren
-ist das relativ Unwahrscheinlich.
+ist das sehr Unwahrscheinlich.
 
 # Aufgabe 6
 
@@ -53,11 +53,11 @@ F	 E    9 --> die letzte Stelle in dem Quartett wäre dann auch noch auf 1
 
 # Aufgabe 8
 a) split(".")
-b) len(label).to_bytes(1)
-c) char.encode()
-d) qname + [b"0"]
+b) len(label)
+c) char
+d) qname + [0.to_bytes(1)]
 
-e) qname, qtype, qclass
+e) qname + qtype + qclass]
 
 # Aufgabe 9
 
@@ -112,10 +112,19 @@ s = P * c
 --> gehört nicht dazu
 
 # Aufgabe 13
-
+*AUFGABE*
+- 0110
+- 1001
+*AUS ZYKLISCHEM*
 - 0000
 - 1100
 - 0011
+*SUMME 2er ERGIBT CODEWORT*
+- 1101
+- 1111
+- 1010
+
+--> ALLE???
 
 # Aufgabe 14
 
@@ -169,6 +178,8 @@ Netz liegt und nicht in der Routingtabelle aufgeführt ist?
 Welche Routingprotokolle wurden für den Einsatz zwischen Autonomen Systemen entworfen?
 - RIP
 - OSPF
+- BGP
+
 
 # Aufgabe 22
 
@@ -181,3 +192,24 @@ Welche Aussagen treffen auf die Transportschicht zu?
 
 Welche Netzmaske hat das Netzwerk 200.42.1.0/17
 - 255.255.128.0
+
+# Aufgabe 24
+
+- Req
+- Ind
+
+# Aufgabe 25
+
+- 110
+- SOCK_STREAM
+- RETR
+- listen
+- accept()
+- split()
+- /mails
+- LIST
+- mail_id
+
+# Aufgabe 26
+
+- keine der anderen Optionen
