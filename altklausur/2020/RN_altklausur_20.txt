@@ -20,6 +20,71 @@ net 10.0.0.0      netmask 255.0.0.0     gw 134.109.186.13  dev eth0
 net default       netmask 0.0.0.0       gw 134.109.186.254 dev eth0
 
 # 2
+
+a)
+Codieren eines linearen Codes:
+c = d * G
+
+c=
+
+    1001010
+    0101101
+    0011101
+	-------
+011|0110000
+
+b)
+Prüfmatrix:
+- inverse des A Anteils der Generatormatrix G = (I|A)
+- Einheitsmatrix *rechts* anhängen
+
+P =
+1111000
+0110100
+1000010
+0110001
+
+c)
+Prüfen eines linearen codes:
+s = P * c
+
+s =
+        1
+        0
+        0
+        1
+        0
+        1
+        0
+		-
+1111000|0
+0110100|0
+1000010|0
+0110001|0
+--> Nullvektor, Codewort korrekt
+
+s =
+        1
+        1
+        0
+        0
+        0
+        1
+        1
+		-
+1111000|0
+0110100|1
+1000010|0
+0110001|0
+--> kein Nullvektor, Codewort inkorrekt
+
+d)
+Dekodieren eines linearen Codes:
+- Länge des Codeworts - Länge der Information = Länge der Prüfbits
+- Länge der Prüfbits hinten vom Codewort abtrennen
+
+d = 001
+
 e) Weil kein Übertragungsmedium ohne Störungsquelle existiert und es somit zu fehlerhaften übertragungsquellen
 kommen kann.
 
@@ -92,7 +157,7 @@ Destination Port: 62774
 SSH
 
 c)
-1: IPv4, IPv6, ICMP
+1: IPv4, IPv6
 2: Weil keine Verbindung aufgebaut wird und somit keine Bestätigung für den Empfang von Daten existiert.
 
 # 6
