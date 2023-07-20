@@ -1,0 +1,183 @@
+# Aufgabe 1
+Da der Datendurchsatz optimiert werden soll und das Gerät nur 4 Anschlüsse hat
+würde ich einen Switch empfehlen. Diese sollten bei 4 Ports recht günstig sein und
+ermöglichen durch die Schaltmatrix einen hohen Durchsatz.
+
+# Aufgabe 2
+Ausgabe der Nachricht bei Schrit x an:
+1: 2
+2: 1,3,4
+3: 2
+4: 1
+
+# Aufgabe 3
+Port 1: A
+Port 2: B
+Port 3: C
+Port 4: -
+
+# Aufgabe 4
+
+MAC - Adressen haben 48 Bit.
+
+Broadcast Adresse:
+FF:FF:FF:FF:FF:FF
+
+# Aufgabe 5
+
+Auf den höheren Schichten werden Fehler auf logischer Ebene abgefangen, die 
+beispielsweise durch den Verlust von Paketen entstehen können.
+Außerdem dient es als zusätzliche Erkennung falls auf physikalischer Ebene
+die Nutzdaten als auch die Prüfdaten so manipuliert wurden, dass es als
+richtig gewertet wurde, obwohl die Information falsch ist. Dies kann bei der
+Verwendung von einem Paritätsbit leicht passieren, bei anderen Verfahren
+ist das relativ Unwahrscheinlich.
+
+# Aufgabe 6
+
+IPv6 Adresse hat 128 Bit.
+Eine Hexadezimal Stelle hat 16 Zustände (0-F) was 2^4 entsprich, somit
+entspricht eine Hexadezimalzahl 4 Bits.
+Folglich hat eine IPv6 Adresse 128:4 = 32 Hexadezimal Werte.
+
+Das muss Link-Local Unicast sein.
+
+1111 1110 10...
+F	 E    9 --> die letzte Stelle in dem Quartett wäre dann auch noch auf 1
+
+# Aufgabe 7
+
+- Die 3. Nachricht des Handschlages, da nur das ACK Flag gesetzt ist.
+- Destination Port 23
+- 18
+
+# Aufgabe 8
+a) split(".")
+b) len(label).to_bytes(1)
+c) char.encode()
+d) qname + [b"0"]
+
+e) qname, qtype, qclass
+
+# Aufgabe 9
+
+   |1001001
+   |0100101
+   |0010010
+   --------
+011|0110111
+
+c = 0110111
+
+# Aufgabe 10
+
+P =
+1001000
+0100100
+0010010
+1100001
+
+# Aufgabe 11
+
+s = P * c
+
+       |1
+       |0
+       |0
+       |1
+       |0
+       |1
+       |0
+	   --
+1001000|0
+0100100|0
+0010010|1
+1100001|1
+--> gehört nicht dazu
+
+# Aufgabe 12
+
+       |1
+       |1
+       |0
+       |0
+       |0
+       |1
+       |1
+	   --
+1001000|1
+0100100|1
+0010010|1
+1100001|1
+--> gehört nicht dazu
+
+# Aufgabe 13
+
+- 0000
+- 1100
+- 0011
+
+# Aufgabe 14
+
+Jeder lineare Code:
+- ist ein Blockcode
+- mit einem Hammingabstand von 3 kann 1 Einbitfehler erkennen
+
+# Aufgabe 15
+N1: 10.0.0.0/8
+N2: 134.109.166.0/24
+N3: 192.168.0.0/16
+N4: 120.32.20.0/23
+
+R2 in N2: 134.109.166.22
+R3 in N3: 192.168.100.1
+R4 in N2: 134.109.166.254
+
+# Aufgabe 16
+
+- 3 für Handshake
+- 1 fürs Senden
+- 1 für ACK
+- 3 für verkürzten Verbindungsabbau
+
+= 8
+
+# Aufgabe 17
+
+--- fehlt ---
+
+# Aufgabe 18
+
+Mit welchen Anwendungsprotokol können EMails auf dem Mailserver gelöscht werden?
+- POP3
+- IMAP
+
+# Aufgabe 19
+
+Welche Dienste werden in ISO/OSI durch Schicht 2 erbracht?
+- Fehlererkennung
+- Regelung des Zugriffs auf das Medium
+
+# Aufgabe 20
+
+Was macht ein Router wenn ein Paket empfangen wird, das nicht im eigenen
+Netz liegt und nicht in der Routingtabelle aufgeführt ist?
+- er leitet das Paket ans Standardgateway weiter
+
+# Aufgabe 21
+
+Welche Routingprotokolle wurden für den Einsatz zwischen Autonomen Systemen entworfen?
+- RIP
+- OSPF
+
+# Aufgabe 22
+
+Welche Aussagen treffen auf die Transportschicht zu?
+- ermöglicht Kommunikation zw. Prozessen auf untersch. Hosts
+- adressiert mittels Ports
+- abstrahiert die Dienste der Vermittlungsschicht
+
+# Aufgabe 23
+
+Welche Netzmaske hat das Netzwerk 200.42.1.0/17
+- 255.255.128.0
